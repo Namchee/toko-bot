@@ -11,10 +11,24 @@
     "dev": "nodemon"
   },
   "dependencies": {
+    "@open-wa/wa-automate": "^4.7.1",
+    "eslint-config-namchee": "^1.0.5",
     "express": "^4.17.1",
+    "node-cron": "^3.0.0",
+    "nsqjs": "^0.12.1",
     "sequelize": "^6.6.5"
   },
   "devDependencies": {
-    "nodemon": "^2.0.10"
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.29.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsdoc": "^35.4.0",
+    "nodemon": "^2.0.10",
+    "prettier": "^2.3.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
   }
 }
