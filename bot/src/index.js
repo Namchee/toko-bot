@@ -1,14 +1,17 @@
 const { create } = require('@open-wa/wa-automate');
+const { setupListener } = require('./events/wrapper');
 const { db } = require('./db');
 
 (async () => {
   await db.authenticate();
   await db.sync();
-  await create({
+  const client = await create({
     sessionId: 'TOKO_BOT',
     qrTimeout: 0,
     useStealth: true,
     headless: true,
     authTimeout: 0,
   });
+
+  setupListener(client);
 })();
