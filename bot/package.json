@@ -8,15 +8,16 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon src/index.js"
   },
   "dependencies": {
+    "@google-cloud/vision": "^2.3.5",
     "@open-wa/wa-automate": "^4.7.1",
     "eslint-config-namchee": "^1.0.5",
-    "express": "^4.17.1",
     "node-cron": "^3.0.0",
     "nsqjs": "^0.12.1",
-    "sequelize": "^6.6.5"
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.2.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.0",

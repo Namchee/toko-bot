@@ -42,15 +42,32 @@ services:
     networks: 
       - backend
   bot:
-    build:
-      context: .
+    build: ./bot
     restart: always
-    image: tokobot
+    image: tokobot:bot
     env_file:
-      - ./.env
+      - ./bot/.env
     environment:
       - NODE_ENV=development
     depends_on:
+      - nsqlookupd
+      - nsqd
+      - postgres
+    networks:
+      - backend
+  server:
+    build: ./server
+    restart: always
+    image: tokobot:server
+    env_file:
+      - ./server/.env
+    environment:
+      - NODE_ENV=development
+    ports:
+      - 3001:3001
+    depends_on:
+      - nsqlookupd
+      - nsqd
       - postgres
     networks:
       - backend

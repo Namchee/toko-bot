@@ -3,6 +3,7 @@ const express = require('express');
 class Server {
   constructor() {
     this.server = express();
+    this.server.use(express.json());
   }
 
   addMiddleware(middleware) {
@@ -10,6 +11,7 @@ class Server {
   }
 
   start() {
+    this.server.get('/ping', (req, res) => res.send('pang'));
     this.server.listen(
       Number(process.env.PORT),
       () => console.log(`Server is listening on port ${process.env.PORT}`),
@@ -17,4 +19,7 @@ class Server {
   }
 }
 
-exports.Server = Server;
+(() => {
+  const server = new Server();
+  server.start();
+})();
