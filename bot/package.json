@@ -16,6 +16,8 @@
     "eslint-config-namchee": "^1.0.5",
     "node-cron": "^3.0.0",
     "nsqjs": "^0.12.1",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
     "sequelize": "^6.6.5",
     "sequelize-cli": "^6.2.0"
   },

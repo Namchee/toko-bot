@@ -74,9 +74,11 @@ dist
 .dynamodb/
 # TernJS port file
 .tern-port
-db/
+**/db/
+**/key.json
 
 # managed by open-wa
 **.data.json
 **.node-persist**
 # end managed by open-wa
+

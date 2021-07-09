@@ -11,7 +11,7 @@ class Server {
   }
 
   start() {
-    this.server.get('/ping', (req, res) => res.send('pang'));
+    this.server.get('/ping', (req, res) => res.json('ping'));
     this.server.listen(
       Number(process.env.PORT),
       () => console.log(`Server is listening on port ${process.env.PORT}`),
